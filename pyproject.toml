@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "popnas"
+version = "0.1.0"
+description = "POPNAS algorithm"
+authors = ["AndreaFalanti <a.falanti@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+# tested on 3.7.4 on windows, docker use 3.8.10
+python = ">=3.7.0, <3.9.0"
+tensorflow = "2.7.0"
+scikit-learn = "1.0.1"
+pandas = "1.1.5"
+tqdm = "4.62.0"
+matplotlib = "3.3.4"
+mypy = "0.910"
+catboost = "1.0.3"
+pydot = "1.4.2"
+numba = "0.53.1"
+psutil = "5.8.0"
+seaborn = "0.11.2"
+tf2onnx = "1.9.3"
+keras-tuner = "1.1.0"
+tensorflow-addons = {extras = ["tensorflow"], version = "0.15.0"}
+tensorflow-datasets = "4.5.2"
+tensorflow-probability = "0.15.0"
+igraph = "0.9.8"
+# shap 0.40.0 has a trivial variable naming bug
+# it's fixed in my personal fork but when shap will be updated it's better to switch back to the official version
+shap = {git = "https://github.com/AndreaFalanti/shap.git"}
+# aMLLibrary only
+xgboost = "1.4.2"
+mlxtend = "0.18.0"
+hyperopt = "0.2.5"
+eli5 = "0.11.0"
+
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.5.7"
+pylint = "^2.9.6"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.autopep8]
+max_line_length = 150
+in-place = true
+recursive = false
